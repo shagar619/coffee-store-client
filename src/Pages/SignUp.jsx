@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { FaLeftLong } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import axios from "axios";
 
 
 
@@ -32,22 +33,37 @@ const SignUp = () => {
         const createdAt = result?.user?.metadata?.createdAt;
 
         const newUser = { name, email, createdAt, createdTime };
+      
 
-        // save new user info to the DB
-        fetch('https://coffee-store-server-rouge-eta.vercel.app/users', {
-          method: "POST",
-          headers: {
-            'content-type': 'application/json'
-          },
-          body: JSON.stringify(newUser)
-        })
-        .then(res => res.json())
+        // using axios
+
+        axios.post('https://coffee-store-server-rouge-eta.vercel.app/users', newUser)
         .then(data => {
-          if(data.insertedId){
-        alert('Sign Up Successfully!');
-        form.reset();
+          if(data.data.insertedId) {
+            alert('Sign Up Successfully');
           }
         })
+
+
+        
+
+        // using fetch
+
+        // save new user info to the DB
+        // fetch('https://coffee-store-server-rouge-eta.vercel.app/users', {
+        //   method: "POST",
+        //   headers: {
+        //     'content-type': 'application/json'
+        //   },
+        //   body: JSON.stringify(newUser)
+        // })
+        // .then(res => res.json())
+        // .then(data => {
+        //   if(data.insertedId){
+        // alert('Sign Up Successfully!');
+        // form.reset();
+        //   }
+        // })
       })
       .catch(error => {
       })

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { FaLeftLong } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import axios from "axios";
 
 
 const SignIn = () => {
@@ -27,16 +28,31 @@ const SignIn = () => {
             const lastSignInTime = result?.user?.metadata?.lastSignInTime;
             const loginInfo = { email, lastSignInTime };
 
-            fetch(`https://coffee-store-server-rouge-eta.vercel.app/users`, {
-                method: "PATCH",
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(loginInfo)
-            })
-            .then(res => res.json())
+            //using axios
+
+            axios.patch(`https://coffee-store-server-rouge-eta.vercel.app/users`, loginInfo)
             .then(data => {
+                if(data.data.modifiedCount > 0) {
+                    alert('Sign In Successfully!');
+                }
             })
+
+
+
+
+
+            // using fetch
+
+            // fetch(`https://coffee-store-server-rouge-eta.vercel.app/users`, {
+            //     method: "PATCH",
+            //     headers: {
+            //         'content-type': 'application/json'
+            //     },
+            //     body: JSON.stringify(loginInfo)
+            // })
+            // .then(res => res.json())
+            // .then(data => {
+            // })
         })
         .catch(error => {
         })
