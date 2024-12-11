@@ -30,7 +30,7 @@ const Users = () => {
 
 
                 // Delete from the DB
-            fetch(`http://localhost:5000/users/${id}`, {
+            fetch(`https://coffee-store-server-rouge-eta.vercel.app/users/${id}`, {
                 method: "DELETE"
             })
             .then(res => res.json())
@@ -70,7 +70,7 @@ const Users = () => {
                         <th>E-mail</th>
                         <th>Creation Time</th>
                         <th>Last Login Time</th>
-                        <th>Action</th>
+                        <th>Action At</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -23,7 +23,7 @@ const UpdateCoffeeForm = ({ coffee }) => {
 
         const updatedCoffee = { name, chef, supplier, taste, category, details, photo, price }
 
-        fetch(`http://localhost:5000/coffee/${_id}`, {
+        fetch(`https://coffee-store-server-rouge-eta.vercel.app/coffee/${_id}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json'
