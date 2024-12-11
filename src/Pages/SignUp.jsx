@@ -28,7 +28,6 @@ const SignUp = () => {
       
       createUser(email, password)
       .then(result => {
-        console.log(result.user);
         const createdTime = result?.user?.metadata?.creationTime;
         const createdAt = result?.user?.metadata?.createdAt;
 
@@ -51,7 +50,6 @@ const SignUp = () => {
         })
       })
       .catch(error => {
-        console.log(error.code);
       })
     }
 

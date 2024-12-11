@@ -22,7 +22,6 @@ const SignIn = () => {
 
         signInUser(email, password)
         .then(result => {
-            console.log(result.user);
 
             // update last login time
             const lastSignInTime = result?.user?.metadata?.lastSignInTime;
@@ -37,11 +36,9 @@ const SignIn = () => {
             })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
             })
         })
         .catch(error => {
-            console.log(error);
         })
 
 

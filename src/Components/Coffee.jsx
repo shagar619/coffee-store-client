@@ -8,7 +8,6 @@ const Coffee = ({ coffee, setCoffees, coffees }) => {
     const { _id, name, chef, photo, price } = coffee;
 
     const handleDelete = (id) => {
-        // console.log(id);
 
         Swal.fire({
             title: "Are you sure?",
