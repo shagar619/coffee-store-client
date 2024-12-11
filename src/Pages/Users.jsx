@@ -50,7 +50,7 @@ const Users = () => {
     }
 
     return (
-        <div className="bg-formBG">
+        <div style={{backgroundImage: `url('https://i.ibb.co.com/MhqZ7n3/11.png')`}} className="bg-formBG">
 
 
             <div className="w-9/12 mx-auto">

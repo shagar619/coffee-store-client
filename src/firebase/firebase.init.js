@@ -21,3 +21,23 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 export default auth;
+
+
+
+
+
+
+// 1. firebase-tools (one time)
+// 2. firebase login (one time)
+// 3. one time for each project : firebase init
+// 4. what you want to do: select hosting
+// 5. selected a projected (already have one created in firebase console)
+// 6. what will be your public repo: dist
+// 7 . single page?: y
+// 8. deploys with GitHub?: n
+
+// ---------------------------------
+// Each time you want to deploy
+
+// 9. npm run build
+// 10. firebase deploy

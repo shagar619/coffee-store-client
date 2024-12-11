@@ -6,7 +6,7 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const Footer = () => {
     return (
-        <div className="bg-footer flex justify-center items-center gap-32 pt-32 pb-12">
+        <div style={{backgroundImage: `url('https://i.ibb.co.com/YXft9W1/13.jpg')`}} className="bg-footer flex justify-center items-center gap-32 pt-32 pb-12">
 
             <div>
                 <img className='h-24 w-20 mb-3' src={logo} alt="" />

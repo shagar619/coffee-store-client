@@ -5,7 +5,7 @@ import roasting from './../assets/icons/4.png'
 
 const Categories = () => {
     return (
-        <div className="bg-category flex justify-center items-center gap-16 py-14">
+        <div style={{backgroundImage: `url('https://i.ibb.co.com/gPS7nS9/10.png')`}} className="flex justify-center items-center gap-16 py-14">
 
             <div>
                 <div>
@@ -32,7 +32,7 @@ const Categories = () => {
             
             <div>
                 <div>
-                    <img src={aroma} alt="" />
+                    <img src={roasting} alt="" />
                 </div>
                 <h3 className='text-[#331A15] text-[35px] font-medium'>Proper Roasting</h3>
                 <p className='text-[#1B1A1A] text-base font-normal'>Your coffee is brewed by first roasting <br /> the green coffee beans</p>

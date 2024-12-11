@@ -14,7 +14,7 @@ const UpdateCoffee = () => {
     }
 
     return (
-        <div className="bg-formBG pb-32">
+        <div style={{backgroundImage: `url('https://i.ibb.co.com/MhqZ7n3/11.png')`}} className="pb-32">
         <div className="w-10/12 mx-auto">
             <h3 className="text-[#374151] text-[30px] font-semibold flex items-center gap-6 my-12"><span onClick={handleBack} className="font-light"><FaLeftLong></FaLeftLong></span> Back to Home</h3>
 

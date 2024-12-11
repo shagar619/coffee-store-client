@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 const UpdateCoffeeForm = ({ coffee }) => {
 
     const { _id, name, taste, category, chef, details, photo, price, supplier } = coffee;
+    const navigate = useNavigate();
 
     const handleUpdateCoffee = (e) => {
         e.preventDefault();
@@ -37,6 +39,8 @@ const UpdateCoffeeForm = ({ coffee }) => {
                     icon: 'success',
                     confirmButtonText: 'Cool'
                 });
+                navigate(-1);
+
             }
         })
 

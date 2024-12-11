@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
 
 
+
 const SignUp = () => {
 
   const { createUser } = useContext(AuthContext);
@@ -44,7 +45,8 @@ const SignUp = () => {
         .then(res => res.json())
         .then(data => {
           if(data.insertedId){
-            alert('user created successfully!');
+        alert('Sign Up Successfully!');
+        form.reset();
           }
         })
       })
@@ -60,7 +62,7 @@ const SignUp = () => {
         <h3 className="text-[#374151] text-[30px] font-semibold flex items-center gap-6 my-12"><span onClick={handleBack} className="font-light"><FaLeftLong></FaLeftLong></span> Back to Home</h3>
     </div>
 
-        <div className="bg-signinBG bg-cover rounded flex items-center h-[600px] mx-[315px] my-[100px] ">
+        <div style={{backgroundImage: `url('https://i.ibb.co.com/TkhqXxb/24.jpg')`}} className="bg-signinBG bg-cover rounded flex items-center h-[600px] mx-[315px] my-[100px] ">
 
         <div className="card w-7/12 mx-auto font-sans">
       <form onSubmit={handleSignUp} className="card-body">

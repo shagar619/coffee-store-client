@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import logo from './../assets/more/logo1.png'
+import logo from './../assets/more/logo1.png';
+
 
 const Navbar = () => {
     return (
-        <div className="bg-navbar flex justify-between items-center px-12">
+        <div style={{backgroundImage: `url('https://i.ibb.co.com/cr8yKW7/15.jpg')`}} className=" flex justify-between items-center px-12">
 
             <div></div>
 

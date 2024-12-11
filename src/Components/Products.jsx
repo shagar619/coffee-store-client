@@ -12,7 +12,7 @@ const Products = ({ coffees, setCoffees }) => {
     }
 
     return (
-        <div className="my-32 bg-products">
+        <div style={{backgroundImage: `url('https://i.ibb.co.com/5Lj7My0/1.png')`}} className="my-32">
             <p className="font-sans text-xl text-[#1B1A1A] font-normal text-center">--- Sip & Savor ---</p>
             <h3 className="text-[#331A15] text-5xl font-bold text-center mb-6">Our Popular Products</h3>
             <p className="flex justify-center items-center"><button onClick={handleAdd} className="text-white text-2xl font-normal flex justify-between items-center gap-3 bg-[#E3B577] py-2 px-4 border border-black rounded-md">Add Coffee <span className="text-black"><BsCup></BsCup></span></button></p>

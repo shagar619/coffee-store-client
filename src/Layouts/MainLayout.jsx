@@ -3,6 +3,7 @@ import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 
+
 const MainLayout = () => {
     return (
         <div className="rancho-font">
@@ -23,7 +24,7 @@ const MainLayout = () => {
             <footer>
             <Footer></Footer>
 
-            <div className='bg-navbar py-3'>
+            <div style={{backgroundImage: `url('https://i.ibb.co.com/cr8yKW7/15.jpg')`}} className='py-3'>
                 <h3 className="text-white text-xl font-normal text-center">@Copyright Espresso Emporium ! All Rights Reserved</h3>
             </div>
 
